@@ -48,9 +48,27 @@ public class MyAdapter extends BaseAdapter {
 
         return convertView;
     }
+    public void clearAllContacts(){
+        persons.clear();
+        notifyDataSetChanged();
+
+    }
 
     public void addPerson(Person p) {
         persons.add(0, p);
+        notifyDataSetChanged();
+    }
+    public void updatePerson(Person person, String name, String email, String phone, String description, String address){
+        person.setFullName(name);
+        person.setEmail(email);
+        person.setPhoneNumber(phone);
+        person.setDescription(description);
+        person.setAddress(address);
+        notifyDataSetChanged();
+    }
+
+    public void removePerson(Person p){
+        persons.remove(p);
         notifyDataSetChanged();
     }
 }

@@ -10,6 +10,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <FrameLayout
+        android:id="@+id/my_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b0ffffff"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
     <TextView
         android:id="@+id/view_empty"
         android:layout_width="wrap_content"
@@ -18,23 +30,4 @@
         android:text="List empty"
         android:textSize="28sp"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="16dp"
-        android:text="Logout" />
-
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:text="Add" />
-
 </RelativeLayout>

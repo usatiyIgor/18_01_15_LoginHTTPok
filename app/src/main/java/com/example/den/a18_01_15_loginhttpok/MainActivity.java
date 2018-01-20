@@ -1,6 +1,7 @@
 package com.example.den.a18_01_15_loginhttpok;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         myProgress = findViewById(R.id.progressBar);
         regBtn.setOnClickListener(v -> new RegTask().execute());
         loginBtn.setOnClickListener(v -> new LoginTask().execute());
+        if(!loadToken().equals("")){
+            Intent intent = new Intent(MainActivity.this,ContactList.class);
+            startActivityForResult(intent,1);
+        }
     }
 
     class RegTask extends AsyncTask<Void, Void, String> {
@@ -121,5 +126,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,1);
             }
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                Toast.makeText(this, "User pushed logout", Toast.LENGTH_SHORT).show();
+            }else {
+                finish();
+            }
+        }
+    }
+
+    private String loadToken() {
+        SharedPreferences sharedPreferences = getSharedPreferences(AuthToken.TOKEN_STORAGE, MODE_PRIVATE);
+        return sharedPreferences.getString(AuthToken.TOKEN, "");
     }
 }

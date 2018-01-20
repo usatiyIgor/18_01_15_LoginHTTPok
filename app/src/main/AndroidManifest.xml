@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContactList"></activity>
+        <activity android:name=".ContactList" />
+        <activity android:name=".ContactView" />
+        <activity android:name=".AddContact" />
+        <activity android:name=".Download"></activity>
     </application>
 
 </manifest>

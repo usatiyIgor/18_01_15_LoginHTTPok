@@ -6,4 +6,12 @@ package com.example.den.a18_01_15_loginhttpok;
 
 public class Persons {
     public Person[] contacts;
+
+    public Persons(Person[] contacts) {
+        this.contacts = contacts;
+    }
+
+    public Persons() {
+
+    }
 }

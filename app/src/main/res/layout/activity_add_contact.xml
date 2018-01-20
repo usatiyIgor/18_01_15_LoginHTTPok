@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.den.a18_01_15_loginhttpok.AddContact">
+    <EditText
+        android:id="@+id/input_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:width="200dp"
+        android:hint="Type address"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/input_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_address"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:hint="Type description"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_description"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:hint="Type email"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/input_fullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_email"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:hint="Type full name"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/input_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_fullName"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:hint="Type phone number"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/my_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b0ffffff"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</RelativeLayout>
